@@ -1,6 +1,11 @@
 export default class Leaf{
 	constructor(){
-		this.pos = {x:Math.random() * width,y:Math.random() * (height - 100)};
+		let angle = Math.random() * 2 * Math.PI;
+		let range = {x:2,y:3}
+		let radiusRange = range.y * range.x / 
+					(Math.sqrt(Math.pow(range.x*Math.cos(angle),2) + Math.pow(range.y*Math.sin(angle),2)));
+		let radius = Math.random() * width / 2;
+		this.pos = {x:radius * Math.cos(angle) + width / 2,y:radius * Math.sin(angle) + height / 2};
 		this.reached = false;
 	}
 

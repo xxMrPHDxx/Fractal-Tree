@@ -1,7 +1,7 @@
 import Tree from './tree.js';
 
 window.width = 600;
-window.height = 600;
+window.height = 800;
 
 const canvas = document.querySelector('#Game');
 canvas.setAttribute('width',width);
